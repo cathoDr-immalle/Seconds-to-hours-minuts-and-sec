@@ -15,6 +15,13 @@ namespace ConsoleApp2
             tijdBereken(5489);
             tijdBereken(131614154);
 
+            Console.WriteLine(" ");
+
+            tijdInSeconde(0, 42, 29);
+            tijdInSeconde(12, 24, 53);
+            tijdInSeconde(24, 0, 0);
+            tijdInSeconde(36, 36, 36);
+
             Console.Read();
         }
 
@@ -33,6 +40,12 @@ namespace ConsoleApp2
             } 
             
             Console.WriteLine("{0} seconden = {1} uren, {2} minuten en {3} seconden.", TotaalAantalSeconde, Uren, Minuten, seconden);
+        }
+
+        static void tijdInSeconde(int uur, int min, int sec)
+        {
+            int TotaalSeconde = (uur * 3600) + (min * 60) + sec;
+            Console.WriteLine("{0} uur, {1} minuten en {2} seconden = {3} seconden in totaal.", uur, min, sec, TotaalSeconde);
         }
 
     }
